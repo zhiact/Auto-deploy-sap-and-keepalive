@@ -66,7 +66,7 @@ on:
         default: ''
 
 env:
-  MEMORY: 512M
+  MEMORY: 256M
   DISK: 300M
 
 jobs:
@@ -255,7 +255,7 @@ jobs:
           elif [ "${{ github.event.inputs.type }}" = "xhttp直连" ]; then
             echo "DOCKER_IMAGE=ghcr.io/eooce/goxhttp:latest" >> $GITHUB_ENV
           elif [ "${{ github.event.inputs.type }}" = "自定义" ]; then
-            echo "DOCKER_IMAGE= docker.io/ygkkk/argosbx:latest" >> $GITHUB_ENV
+            echo "DOCKER_IMAGE= docker.io/uncleluo/mous:latest" >> $GITHUB_ENV
           else 
             echo "DOCKER_IMAGE=ghcr.io/eooce/nodejs:main" >> $GITHUB_ENV
           fi
