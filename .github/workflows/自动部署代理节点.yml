@@ -256,7 +256,6 @@ jobs:
             echo "DOCKER_IMAGE=ghcr.io/eooce/goxhttp:latest" >> $GITHUB_ENV
           elif [ "${{ github.event.inputs.type }}" = "自定义" ]; then
             echo "DOCKER_IMAGE= docker.io/zhiact/v2-koyeb:latest" >> $GITHUB_ENV
-          else
           else 
             echo "DOCKER_IMAGE=ghcr.io/eooce/nodejs:main" >> $GITHUB_ENV
           fi
