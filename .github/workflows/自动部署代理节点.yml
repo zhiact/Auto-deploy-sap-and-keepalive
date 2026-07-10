@@ -12,6 +12,7 @@ on:
           - ws直连
           - xhttp直连
           - Argo隧道CDN
+          - 自定义
       region:
         description: '选择部署区域'
         required: true
@@ -253,6 +254,9 @@ jobs:
             echo "DOCKER_IMAGE=ghcr.io/eooce/ws:latest" >> $GITHUB_ENV
           elif [ "${{ github.event.inputs.type }}" = "xhttp直连" ]; then
             echo "DOCKER_IMAGE=ghcr.io/eooce/goxhttp:latest" >> $GITHUB_ENV
+          elif [ "${{ github.event.inputs.type }}" = "自定义" ]; then
+            echo "DOCKER_IMAGE= docker.io/zhiact/v2-koyeb:latest" >> $GITHUB_ENV
+          else
           else 
             echo "DOCKER_IMAGE=ghcr.io/eooce/nodejs:main" >> $GITHUB_ENV
           fi
